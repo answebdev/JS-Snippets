@@ -1,13 +1,26 @@
-// FIZZ BUZZ
+// Using the Object.keys() method to turn an object into an array.
 
-for (i = 0; i <= 100; i++) {
-  if (i % 3 == 0) {
-    console.log('Fizz');
-  } else if (i % 5 == 0) {
-    console.log('Buzz');
-  } else if (i % 3 == 0 && i % 5 == 0) {
-    console.log('FIZZBUZZ');
-  } else {
-    console.log(i);
-  }
-}
+// The Object.keys() method returns an array of a given object's own enumerable property names,
+// iterated in the same order that a normal loop would.
+
+// Object.keys() returns an array whose elements are strings corresponding to the enumerable properties found directly upon object.
+// The ordering of the properties is the same as that given by looping over the properties of the object manually.
+// Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+
+// Object:
+const items = {
+  eggs: 1,
+  apples: 5,
+  chocolate: 2,
+  milk: 1,
+  almonds: 25,
+};
+
+console.log('\n');
+console.log(items); // Returns object
+
+console.log(Object.keys(items)); // Returns an array of the keys
+console.log(Object.values(items)); // Returns an array of the values
+console.log(Object.entries(items)); // Returns BOTH keys and values in an array
+
+// Adapted from: https://www.samanthaming.com/tidbits/76-converting-object-to-array/
